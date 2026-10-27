@@ -6,7 +6,7 @@ import {
   listTransactionRules,
   transactionIdRules,
 } from '../validators/transaction.validator.js';
-import { validate } from '../validators/validate.js';
+import { validate } from '../validator/validate.js';
 
 const router = express.Router();
 
