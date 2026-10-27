@@ -1,0 +1,12 @@
+import { Eye, EyeOff } from 'lucide-react'
+import { useState } from 'react'
+import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom'
+import { DEMO_ACCOUNT, useAuth } from '../context/AuthContext'
+export default function Login() {
+  const { user, login } = useAuth(); const navigate = useNavigate(); const location = useLocation()
+  const [email, setEmail] = useState(''); const [password, setPassword] = useState(''); const [show, setShow] = useState(false); const [error, setError] = useState(''); const [loading, setLoading] = useState(false)
+  if (user) return <Navigate to="/dashboard" replace />
+  const submit = async (event) => { event.preventDefault(); setError(''); if (!email || !password) return setError('Please enter your email and password.'); setLoading(true); try { await login(email, password); navigate(location.state?.from?.pathname || '/dashboard', { replace: true }) } catch (err) { setError(err.message) } finally { setLoading(false) } }
+  return <AuthPage><h1>Welcome back</h1><p className="intro">Sign in to keep your finances on track.</p>{location.state?.registered && <div className="success-message">Demo registration validated. Sign in with the demo account below.</div>}<form onSubmit={submit}><div className="form-group"><label htmlFor="email">Email address</label><input id="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="you@example.com" /></div><div className="form-group"><label htmlFor="password">Password</label><div className="input-wrap"><input id="password" type={show ? 'text' : 'password'} value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Enter your password" /><button className="toggle-password" type="button" onClick={() => setShow(!show)} aria-label="Toggle password visibility">{show ? <EyeOff size={17} /> : <Eye size={17} />}</button></div></div>{error && <div className="error-message">{error}</div>}<button className="primary-button" disabled={loading}>{loading ? 'Signing in...' : 'Sign in to PennyWise'}</button></form><div className="demo-note"><strong>Demo credentials</strong><br />{DEMO_ACCOUNT.email} · {DEMO_ACCOUNT.password}</div><p className="auth-foot">New to PennyWise? <Link to="/register">Create a demo account</Link></p></AuthPage>
+}
+function AuthPage({ children }) { return <main className="auth-page"><section className="auth-card"><div className="brand"><span className="brand-mark">₿</span> PennyWise</div>{children}</section></main> }
