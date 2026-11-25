@@ -1,0 +1,36 @@
+import { query } from 'express-validator';
+
+const monthYearRules = [
+  query('month')
+    .optional({ values: 'falsy' })
+    .isInt({ min: 1, max: 12 }).withMessage('month must be between 1 and 12')
+    .toInt(),
+  query('year')
+    .optional({ values: 'falsy' })
+    .isInt({ min: 1, max: 9999 }).withMessage('year must be a valid year')
+    .toInt(),
+];
+
+const yearRules = [
+  query('year')
+    .optional({ values: 'falsy' })
+    .isInt({ min: 1, max: 9999 }).withMessage('year must be a valid year')
+    .toInt(),
+];
+
+const dateRangeRules = [
+  query('from')
+    .optional({ values: 'falsy' })
+    .isString().withMessage('from must be YYYY-MM-DD').bail()
+    .isDate({ format: 'YYYY-MM-DD', strictMode: true, delimiters: ['-'] })
+    .withMessage('from must be a valid date in YYYY-MM-DD format'),
+  query('to')
+    .optional({ values: 'falsy' })
+    .isString().withMessage('to must be YYYY-MM-DD').bail()
+    .isDate({ format: 'YYYY-MM-DD', strictMode: true, delimiters: ['-'] })
+    .withMessage('to must be a valid date in YYYY-MM-DD format').bail()
+    .custom((to, { req }) => !req.query.from || to >= req.query.from)
+    .withMessage('to must not be earlier than from'),
+];
+
+export { dateRangeRules, monthYearRules, yearRules };
