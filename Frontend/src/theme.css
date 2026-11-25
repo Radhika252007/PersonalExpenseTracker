@@ -1,0 +1,271 @@
+:root[data-theme='light'] {
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  color: #e6edf5;
+  background: #111923;
+}
+
+:root[data-theme='dark'] body,
+:root[data-theme='dark'] .auth-page,
+:root[data-theme='dark'] .app-shell,
+:root[data-theme='dark'] .main-area {
+  color: #e6edf5;
+  background: #111923;
+}
+
+:root[data-theme='dark'] .topbar,
+:root[data-theme='dark'] .sidebar,
+:root[data-theme='dark'] .card,
+:root[data-theme='dark'] .auth-card {
+  color: #e6edf5;
+  background: #192431;
+  border-color: #2b394a;
+  box-shadow: none;
+}
+
+:root[data-theme='dark'] .topbar {
+  border-bottom-color: #2b394a;
+}
+
+:root[data-theme='dark'] .sidebar {
+  border-right-color: #2b394a;
+}
+
+:root[data-theme='dark'] .topbar h1,
+:root[data-theme='dark'] .brand,
+:root[data-theme='dark'] .placeholder h2,
+:root[data-theme='dark'] .auth-card h1,
+:root[data-theme='dark'] .settings-section-heading h3,
+:root[data-theme='dark'] .settings-page-heading h2,
+:root[data-theme='dark'] .transaction-page-heading h2,
+:root[data-theme='dark'] .analytics-heading h2,
+:root[data-theme='dark'] .card-header h3,
+:root[data-theme='dark'] .settings-dialog h3,
+:root[data-theme='dark'] .summary-card h2,
+:root[data-theme='dark'] .analytics-table td:first-child {
+  color: #e9eff7;
+}
+
+:root[data-theme='dark'] .app-shell :where(strong, label, th, td),
+:root[data-theme='dark'] .settings-field,
+:root[data-theme='dark'] .budget-form-field,
+:root[data-theme='dark'] .recurring-form label,
+:root[data-theme='dark'] .transaction-edit-fields label,
+:root[data-theme='dark'] .form-group label {
+  color: #d3dce7;
+}
+
+:root[data-theme='dark'] .eyebrow,
+:root[data-theme='dark'] .muted,
+:root[data-theme='dark'] .profile span,
+:root[data-theme='dark'] .nav-label,
+:root[data-theme='dark'] .summary-card p,
+:root[data-theme='dark'] .settings-section-heading p,
+:root[data-theme='dark'] .settings-note,
+:root[data-theme='dark'] .settings-label,
+:root[data-theme='dark'] .settings-category-group-title,
+:root[data-theme='dark'] .settings-data-copy span,
+:root[data-theme='dark'] .settings-dialog p,
+:root[data-theme='dark'] .budget-empty,
+:root[data-theme='dark'] .budget-progress-footer,
+:root[data-theme='dark'] .recurring-subtitle,
+:root[data-theme='dark'] .recurring-date,
+:root[data-theme='dark'] .transaction-list-details span,
+:root[data-theme='dark'] .transaction-empty,
+:root[data-theme='dark'] .analytics-category-row,
+:root[data-theme='dark'] .analytics-empty,
+:root[data-theme='dark'] .analytics-table th,
+:root[data-theme='dark'] .auth-card .intro,
+:root[data-theme='dark'] .auth-foot,
+:root[data-theme='dark'] .placeholder p {
+  color: #9eacbd;
+}
+
+:root[data-theme='dark'] .sidebar-link {
+  color: #aab7c7;
+}
+
+:root[data-theme='dark'] .sidebar-link:hover,
+:root[data-theme='dark'] .sidebar-link.active {
+  color: #9dd5fa;
+  background: #23384b;
+}
+
+:root[data-theme='dark'] .settings-section-icon,
+:root[data-theme='dark'] .settings-data-icon,
+:root[data-theme='dark'] .settings-budget-summary-icon,
+:root[data-theme='dark'] .settings-dialog-icon {
+  color: #9dd5fa;
+  background: #23384b;
+}
+
+:root[data-theme='dark'] .settings-budget-summary,
+:root[data-theme='dark'] .dashboard-empty,
+:root[data-theme='dark'] .demo-note,
+:root[data-theme='dark'] .progress,
+:root[data-theme='dark'] .budget-progress-track {
+  background: #222f3d;
+}
+
+:root[data-theme='dark'] .settings-budget-summary-icon {
+  background: #192431;
+}
+
+:root[data-theme='dark'] .settings-category-group-title span,
+:root[data-theme='dark'] .settings-category-mark {
+  color: #b7c4d2;
+  background: #263545;
+}
+
+:root[data-theme='dark'] .settings-category-row,
+:root[data-theme='dark'] .settings-category-edit,
+:root[data-theme='dark'] .settings-toggle-row,
+:root[data-theme='dark'] .transaction-row,
+:root[data-theme='dark'] .transaction-list-row,
+:root[data-theme='dark'] .transaction-edit-form,
+:root[data-theme='dark'] .transaction-pagination,
+:root[data-theme='dark'] .monthly-insight,
+:root[data-theme='dark'] .recurring-row,
+:root[data-theme='dark'] .budget-progress-item,
+:root[data-theme='dark'] .analytics-table th,
+:root[data-theme='dark'] .analytics-table td {
+  border-color: #2b394a;
+}
+
+:root[data-theme='dark'] .settings-field input,
+:root[data-theme='dark'] .settings-field select,
+:root[data-theme='dark'] .form-group input,
+:root[data-theme='dark'] .transaction-form input,
+:root[data-theme='dark'] .transaction-form select,
+:root[data-theme='dark'] .transaction-filter-form input,
+:root[data-theme='dark'] .transaction-filter-form select,
+:root[data-theme='dark'] .transaction-edit-fields input,
+:root[data-theme='dark'] .transaction-edit-fields select,
+:root[data-theme='dark'] .budget-period input,
+:root[data-theme='dark'] .budget-period select,
+:root[data-theme='dark'] .budget-form-field input,
+:root[data-theme='dark'] .budget-form-field select,
+:root[data-theme='dark'] .recurring-form input,
+:root[data-theme='dark'] .recurring-form select,
+:root[data-theme='dark'] .analytics-filters input,
+:root[data-theme='dark'] .analytics-filters select,
+:root[data-theme='dark'] .settings-category-edit input,
+:root[data-theme='dark'] .settings-category-edit select,
+:root[data-theme='dark'] .month-select {
+  color: #e6edf5;
+  border-color: #3a4a5d;
+  background: #131d28;
+}
+
+:root[data-theme='dark'] input::placeholder {
+  color: #7f8da0;
+}
+
+:root[data-theme='dark'] .settings-button-quiet,
+:root[data-theme='dark'] .transaction-action,
+:root[data-theme='dark'] .transaction-filter-button.secondary,
+:root[data-theme='dark'] .transaction-pagination button,
+:root[data-theme='dark'] .budget-add-category,
+:root[data-theme='dark'] .quick-action,
+:root[data-theme='dark'] .settings-icon-action {
+  color: #c4cfdb;
+  border-color: #3a4a5d;
+  background: #202d3b;
+}
+
+:root[data-theme='dark'] .settings-icon-action {
+  border-color: transparent;
+}
+
+:root[data-theme='dark'] .settings-button-quiet:hover:not(:disabled),
+:root[data-theme='dark'] .transaction-action:hover:not(:disabled),
+:root[data-theme='dark'] .transaction-filter-button.secondary:hover,
+:root[data-theme='dark'] .transaction-pagination button:hover:not(:disabled),
+:root[data-theme='dark'] .budget-add-category:hover,
+:root[data-theme='dark'] .quick-action:hover,
+:root[data-theme='dark'] .settings-icon-action:hover {
+  color: #dceeff;
+  background: #2a3c4f;
+}
+
+:root[data-theme='dark'] .settings-icon-danger,
+:root[data-theme='dark'] .transaction-action.delete,
+:root[data-theme='dark'] .settings-button-danger {
+  color: #f0a3a0;
+  border-color: #633d42;
+  background: #33262c;
+}
+
+:root[data-theme='dark'] .settings-danger-row {
+  border-color: #53363b;
+  background: #241e25;
+}
+
+:root[data-theme='dark'] .error-message {
+  color: #ffc2be;
+  background: #432b30;
+}
+
+:root[data-theme='dark'] .success-message {
+  color: #9ce5c5;
+  background: #1e3a32;
+}
+
+:root[data-theme='dark'] .demo-note strong {
+  color: #9dd5fa;
+}
+
+:root[data-theme='dark'] .settings-danger-icon {
+  color: #f0a3a0;
+  background: #33262c;
+}
+
+:root[data-theme='dark'] .settings-button-primary,
+:root[data-theme='dark'] .primary-button,
+:root[data-theme='dark'] .transaction-action.save,
+:root[data-theme='dark'] .transaction-filter-button {
+  color: #fff;
+  border-color: #347eac;
+  background: #276b96;
+}
+
+:root[data-theme='dark'] .settings-button-primary:hover:not(:disabled),
+:root[data-theme='dark'] .primary-button:hover,
+:root[data-theme='dark'] .transaction-action.save:hover:not(:disabled),
+:root[data-theme='dark'] .transaction-filter-button:hover {
+  background: #3180b0;
+}
+
+:root[data-theme='dark'] .income,
+:root[data-theme='dark'] .positive,
+:root[data-theme='dark'] .settings-edit-save {
+  color: #61d0a2;
+}
+
+:root[data-theme='dark'] .expense,
+:root[data-theme='dark'] .negative {
+  color: #ff9292;
+}
+
+:root[data-theme='dark'] .settings-empty strong,
+:root[data-theme='dark'] .transaction-empty strong,
+:root[data-theme='dark'] .budget-empty strong {
+  color: #d3dce7;
+}
+
+:root[data-theme='dark'] .settings-dialog-backdrop,
+:root[data-theme='dark'] .budget-modal-backdrop {
+  background: #050a11bb;
+}
+
+:root[data-theme='dark'] .theme-preference-error {
+  margin: 10px 24px 0;
+  padding: 9px 12px;
+  border-radius: 7px;
+  color: #ffc2be;
+  background: #432b30;
+  font-size: 12px;
+}
