@@ -1,0 +1,183 @@
+.recurring-editor,
+.recurring-list-card {
+  padding: 22px;
+  margin-bottom: 20px;
+}
+
+.recurring-editor .card-header h3,
+.recurring-list-card .card-header h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 5px;
+}
+
+.recurring-form {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: end;
+  gap: 14px;
+}
+
+.recurring-form label {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+  color: #475467;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.recurring-form label em {
+  color: #8b95a5;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.recurring-form input,
+.recurring-form select {
+  width: 100%;
+  min-width: 0;
+  padding: 10px 11px;
+  border: 1px solid #dfe5ec;
+  border-radius: 8px;
+  outline: 0;
+  background: #fff;
+  color: #172033;
+}
+
+.recurring-form input:focus,
+.recurring-form select:focus {
+  border-color: #3d8fc2;
+  box-shadow: 0 0 0 3px #3d8fc215;
+}
+
+.recurring-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 9px;
+}
+
+.recurring-form-actions .primary-button {
+  width: auto;
+  margin: 0;
+  padding-inline: 16px;
+  white-space: nowrap;
+}
+
+.recurring-list {
+  display: grid;
+}
+
+.recurring-row {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 15px 0;
+  border-top: 1px solid #eef1f5;
+}
+
+.recurring-row > .transaction-icon {
+  flex: 0 0 38px;
+  width: 38px;
+  height: 38px;
+}
+
+.recurring-row .income-icon {
+  color: #24966a;
+  background: #e8f7f0;
+}
+
+.recurring-row .expense-icon {
+  color: #b75a5a;
+  background: #fff0ef;
+}
+
+.recurring-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.recurring-title {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.recurring-title strong {
+  overflow: hidden;
+  font-size: 13px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.recurring-status {
+  flex: 0 0 auto;
+  padding: 3px 7px;
+  border-radius: 12px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.recurring-status.active {
+  color: #267657;
+  background: #ecfaf3;
+}
+
+.recurring-status.paused {
+  color: #6f7784;
+  background: #f0f2f5;
+}
+
+.recurring-subtitle,
+.recurring-date {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 5px;
+  color: #8b95a5;
+  font-size: 11px;
+}
+
+.recurring-row .transaction-row-actions {
+  flex: 0 0 auto;
+}
+
+@media (max-width: 900px) {
+  .recurring-form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .recurring-editor,
+  .recurring-list-card {
+    padding: 16px;
+  }
+
+  .recurring-form {
+    grid-template-columns: 1fr;
+    gap: 11px;
+  }
+
+  .recurring-form-actions {
+    justify-content: stretch;
+  }
+
+  .recurring-form-actions .primary-button {
+    flex: 1;
+  }
+
+  .recurring-row {
+    flex-wrap: wrap;
+  }
+
+  .recurring-details {
+    flex-basis: calc(100% - 60px);
+  }
+
+  .recurring-row .transaction-row-actions {
+    margin-left: auto;
+  }
+}
